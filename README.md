@@ -1,5 +1,5 @@
 # blur-videos
-Blur a section of your video using manual tracking of frames
+Blur a section of your video using manual tracking of frames.
 
 This is script is based on the `manual_tracking` module in [MoviePy](https://zulko.github.io/moviepy/) and requires MoviePy and [PyGame](https://www.pygame.org/news) installed. 
 
@@ -7,8 +7,15 @@ The original module is edited to allow for non-consecutive blurring (i.e. skippi
 
 In the below example, the Swedish Sign Language sign BJÖRN ('bear') has been tracked to blur out the mouth for frames when the hand is not articulating in front of the mouth (cf. the non-blurred sign below).
 
+### Blurred video (converted to `.gif`):
 ![bjorn_blurred](https://github.com/borstell/blur-videos/blob/master/bjorn_blurred.gif)
-Blurred video (converted to `.gif`)
 
+### Original video (converted to `.gif`):
 ![bjorn](https://github.com/borstell/blur-videos/blob/master/bjorn.gif)
-Original video (converted to `.gif`)
+
+The script runs over any video file (formats `.mp4`, `.mpg`, `.mpeg`, `.wmv`, `.avi`) inside a directory. The manual tracking is stored as a `.txt` file for each tracked video.
+
+The script can be called from the command line with the command:
+```
+python3 blur-videos.py
+```
